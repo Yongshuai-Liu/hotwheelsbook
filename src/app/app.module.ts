@@ -16,6 +16,7 @@ import { MatCardModule } from '@angular/material/card';
 import { environment } from '../environments/environment';
 import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
 import { TwitterFormComponent } from './twitter-form/twitter-form.component';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { TwitterFormComponent } from './twitter-form/twitter-form.component';
   ],
   providers: [
     FirebaseService,
-    HttpClientModule
+    HttpClientModule,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

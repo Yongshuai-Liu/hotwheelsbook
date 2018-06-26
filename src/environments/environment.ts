@@ -6,11 +6,11 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: 'AIzaSyDGw7xhTHNRWB2xG99CeXPYBm9lWYEnnbI',
-    authDomain: 'stantec-twitter.firebaseapp.com',
-    databaseURL: 'https://stantec-twitter.firebaseio.com',
-    projectId: 'stantec-twitter',
-    storageBucket: 'stantec-twitter.appspot.com',
-    messagingSenderId: '295467252657'
+    apiKey: "AIzaSyAz5zaDG1x3_m8MMFIGjzNP30kQyKlHR6E",
+    authDomain: "mycollection-ea352.firebaseapp.com",
+    databaseURL: "https://mycollection-ea352.firebaseio.com",
+    projectId: "mycollection-ea352",
+    storageBucket: "mycollection-ea352.appspot.com",
+    messagingSenderId: "29218564928"
   }
 };
