@@ -17,12 +17,14 @@ import { environment } from '../environments/environment';
 import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
 import { TwitterFormComponent } from './twitter-form/twitter-form.component';
 import { AuthService } from './services/auth.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpFormComponent,
-    TwitterFormComponent
+    TwitterFormComponent,
+    LoginComponent
   ],
   imports: [
     FormsModule,

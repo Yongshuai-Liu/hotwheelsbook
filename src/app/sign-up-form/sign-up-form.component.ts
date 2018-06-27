@@ -19,17 +19,18 @@ export class SignUpFormComponent implements OnInit {
 
   private createForm() {
     this.signUpForm = new FormGroup({
-      name: new FormControl('', [
-        Validators.required,
-        Validators.minLength(4),
-      ]),
       email: new FormControl('',[
         Validators.required,
         Validators.email,
       ]),
+      password: new FormControl('', [
+        Validators.required,
+        Validators.minLength(8),
+        Validators.maxLength(100),
+      ]),
     });
   }
-  get name() { return this.signUpForm.get('name'); }
+  get password() { return this.signUpForm.get('password'); }
   
   get email() { return this.signUpForm.get('email'); }
 }

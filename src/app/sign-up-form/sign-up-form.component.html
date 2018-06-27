@@ -3,30 +3,14 @@
     <form [formGroup]="signUpForm" #form="ngForm" class="example-form">
       <mat-card-header>
           <mat-card-title>
-            Sign Up
+            Create your Hot Wheels Book Account
           </mat-card-title>
       </mat-card-header>
       <mat-card-content>
-          <mat-form-field class="example-full-width">
-              <input matInput id="name"
-                placeholder="Enter your name"
-                formControlName="name">
-              <div *ngIf="name.invalid && (name.dirty || name.touched)"
-                class="alert alert-danger">
-   
-                <mat-error *ngIf="name.errors.required">
-                  Name is required.
-                </mat-error>
-
-                <mat-error *ngIf="name.errors.minlength">
-                  Name must be at least 4 characters long.
-                </mat-error>
-
-              </div>
-          </mat-form-field>
+          
           <mat-form-field class="example-full-width">
               <input matInput id="email"
-                placeholder="Enter your email"
+                placeholder="Email"
                 formControlName="email">
               <div *ngIf="email.invalid && (email.dirty || email.touched)"
                 class="alert alert-danger">
@@ -41,7 +25,27 @@
                 
               </div>
           </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput type="password" id="password"
+              placeholder="Password"
+              formControlName="password">
+            <div *ngIf="password.invalid && (password.dirty || password.touched)"
+              class="alert alert-danger">
+ 
+              <mat-error *ngIf="password.errors.required">
+                Password is required.
+              </mat-error>
 
+              <mat-error *ngIf="password.errors.minlength">
+                Password must be at least 8 characters long.
+              </mat-error>
+
+              <mat-error *ngIf="password.errors.maxlength">
+                Use 100 characters or fewer for your password
+              </mat-error>
+
+            </div>
+          </mat-form-field>
       </mat-card-content>
       <mat-card-actions align="end">
           <button mat-button [disabled]="signUpForm.invalid" class="right">Ok!</button>
