@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators} from '@angular/forms';
+import { FormGroup, FormControl, Validators, ValidatorFn, AbstractControl} from '@angular/forms';
 import { Router } from '@angular/router';
+import { RegistrationValidator } from '../validators/register.validator';
 
 @Component({
   selector: 'app-sign-up-form',
@@ -28,9 +29,18 @@ export class SignUpFormComponent implements OnInit {
         Validators.minLength(8),
         Validators.maxLength(100),
       ]),
+      confirmPassword: new FormControl('', [
+        Validators.required,
+        RegistrationValidator.matchPassword,
+      ]),
+    }, {
+      
     });
   }
   get password() { return this.signUpForm.get('password'); }
   
   get email() { return this.signUpForm.get('email'); }
+
+  get confirmPassword() { return this.signUpForm.get('confirmPassword'); }
+
 }

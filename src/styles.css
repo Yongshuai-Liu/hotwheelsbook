@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Galada');
 /* You can add global styles to this file, and also import other style files */
 .example-form {
   min-width: 150px;
@@ -27,4 +28,12 @@
 
 .wordwrap{
   word-wrap: break-word;
+}
+
+.galada {
+  font-family: 'Galada', cursive;
+}
+
+.font-size-large {
+  font-size: -webkit-xxx-large;
 }
